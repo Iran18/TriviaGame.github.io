@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simpsons Trivia</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added link to Javascript. -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <!-- Added link to CSS. -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!--The TOP section.-->
+    <center>
+        <h3>Time remaining: <span id="countdown">60 </span> Seconds</h3>
+    </center>
+    <center>
+        <h2>Simpsons Trivia</h2>
+    </center>
+
+    <!--The middle section.-->
+    <!--Question 1-->
+    <center>
+        <div class="question_wrapper">
+            <h2 id="question_holder1">How old is Ned Flanders?</h2>
+        </div>
+    </center>
+    <div class="answer_wrapper">
+        <center>
+            <div class="q1_buttons">
+                <button id="q1_a1">55</button>
+                <button id="q1_a2">60</button>
+                <button id="q1_a3">38</button>
+                <button id="q1_a4">19</button>
+            </div>
+        </center>
+    </div>
+
+    <!--Question 2-->
+    <center>
+        <div class="question_wrapper">
+            <h2 id="question_holder">Cecil is Sideshow Mel's brother?</h2>
+        </div>
+    </center>
+    <div class="answer_wrapper">
+        <center>
+            <div class="q2_buttons">
+                <center><button id="true_a">True</button>
+                    <button id="false_a">False</button></center>
+            </div>
+        </center>
+    </div>
+
+    <!--Question 3-->
+    <center>
+        <div class="question_wrapper">
+            <h2 id="question_holder">Where does Bart make a prank call to?</h2>
+        </div>
+    </center>
+    <div class="answer_wrapper">
+        <center>
+            <div class="q3_buttons">
+                <button id="q3_a1">Canada</button>
+                <button id="q3_a2">France</button>
+                <button id="q3_a3">Japan</button>
+                <button id="q3_a4">Australia</button>
+            </div>
+        </center>
+    </div>
+
+    <!--Question 4-->
+    <center>
+        <div class="question_wrapper">
+            <h2 id="question_holder">Who wears a purple beanie?</h2>
+        </div>
+    </center>
+    <div class="answer_wrapper">
+        <center>
+            <div class="q4_buttons">
+                <button id="q4_a1">Nelson</button>
+                <button id="q4_a2">Jimbo</button>
+                <button id="q4_a3">Ralph</button>
+                <button id="q4_a4">Moe</button>
+            </div>
+        </center>
+    </div>
+
+    <!--Question 5-->
+    <center>
+        <div class="question_wrapper">
+            <h2 id="question_holder">What is Arnie Pie's job?</h2>
+        </div>
+    </center>
+    <div class="answer_wrapper">
+        <center>
+            <div class="q5_buttons">
+                <button id="q5_a1">Clown</button>
+                <button id="q5_a2">Bully</button>
+                <button id="q5_a3">Principle</button>
+                <button id="q5_a4">Traffic Reporter</button>
+            </div>
+        </center>
+    </div>
+
+    <!--The bottom section.-->
+    <div class="results_wrapper">
+        <h3>Correct:</h3>
+        <h3 id="correct_value"></h3>
+        <h3>Incorrect:</h3>
+        <h3 id="incorrect_value"></h3>
+    </div>
+
+    <script>
+
+        //Points.
+        var cPoints = $(correct_value).text(0);
+        var correctPoints = 0
+        var iPoints = $(incorrect_value).text(0);
+        var incorrectPoints = 0
+
+        //Countdowm timer function.
+        var timeLeft = 60;
+
+        function countdown() {
+            document.getElementById("countdown").textContent = timeLeft;
+            timeLeft--;
+            if (timeLeft === 0) {
+                document.getElementById("countdown").textContent = timeLeft;
+                clearInterval(countdownTimer);
+                alert("Time's up!");
+                $("html").remove();
+            };
+        }
+        var countdownTimer = setInterval(countdown, 1000);
+
+        
+
+        //Column #1
+        $("#q1_a2").click(function () {
+            correctPoints++;
+            $(cPoints).text(correctPoints);
+            $(".q1_buttons").on("click", function () {
+                $(this).remove();
+            });
+        });
+
+        //Column #2
+        $("#true_a").click(function () {
+            correctPoints++;
+            $(cPoints).text(correctPoints);
+            $(".q2_buttons").on("click", function () {
+                $(this).remove();
+            });
+        });
+
+        //Column #3
+        $("#q3_a4").click(function () {
+            correctPoints++
+            $(cPoints).text(correctPoints);
+            $(".q3_buttons").on("click", function () {
+                $(this).remove();
+            });
+        });
+
+        //Column #4
+        $("#q4_a2").click(function () {
+            correctPoints++
+            $(cPoints).text(correctPoints);
+            $(".q4_buttons").on("click", function () {
+                $(this).remove();
+            });
+        });
+
+        //Column #5
+        $("#q5_a4").click(function () {
+            correctPoints++
+            $(cPoints).text(correctPoints);
+            $(".q5_buttons").on("click", function () {
+                $(this).remove();
+                $(".q5_buttons")    
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
