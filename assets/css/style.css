@@ -1,46 +1,9 @@
-html { 
- background-color: yellow; /*no-repeat center center fixed;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-/*The top section.*/
-
-
-img {
-    margin-top: 200px;
-    
-     
+html {
+background-color: aquamarine;
 }
 
-/*The middle section.*/
-h1 {
-    font-size: 80px;
-    background-color: chocolate;
-    color: black;
-    border: 10px;
-    font-family: sans-serif;
+#header { 
+background-color: black;
+color: white;
+padding: 15px;
 }
-#start_button {
-    background-color: red;
-color: yellow;
-}
-/*gameIndex.*/
-.question_wrapper {
-    height: 50px;
-        background-color: chocolate;
-    }
-
-    .answer_wrapper {
-        margin-top: 70px;
-        height: 200px;
-            background-color: chocolate;
-        }
-
- 
-
- 
-
-/*The bottom section.*/
